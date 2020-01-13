@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body >
+<style>
+.img-thumbnail{
+  width:150px;
+  height:100px;
+  object-fit: cover;
+  object-position: center;
+  margin:10px;
+}
+#photos {
+    display: flex;
+}
+@media(max-width: 480px) {
+  .img-thumbnail{
+    height:50px;
+  }
+}
+​
+</style>
+<div>
+  <h3>Upload Products</h3>
+​
+  <label>Title</label>
+    <div >
+      <input type="text" id="title">
+    </div>
+  <label>Image</label>
+  <div >
+    <input type="file" class="form-control" name="photo" id="photo" accept=".png, .jpg, .jpeg">
+    <button onclick="addProduct()">Add Product</button>
+  </div>
+   
+  <div id="photos" class="row"></div>
+  
+</div>
+​
+<script>
+  function addProduct(){
+    let files = document.getElementById("photo").files;
+    if (files && files.length) {
+        var fr = new FileReader();
+        fr.onload = function () {
+            var div = document.createElement('div'); 
+            var img = document.createElement('img'); 
+            var h4 = document.createElement('h4'); 
+            img.src = fr.result;
+            img.classList.add("img-thumbnail");
+            h4.innerHTML = document.getElementById("title").value
+           	div.appendChild(img);  
+            div.appendChild(h4);  
+            document.getElementById('photos').appendChild(div); 
+            document.getElementById("title").value = "";
+            document.getElementById("photo").value = "";
+             
+        }
+        fr.readAsDataURL(files[0]);
+    }
+​
+  }
+</script>
+​
+</body>
+</html>
