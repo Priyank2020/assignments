@@ -35,7 +35,21 @@ body
   height: 100px;
   align-self: right;
 }
+
+.well-small
+{
+	float: left;
+}
 	
+/*.container
+{
+	float: right;
+}
+
+.span12
+{
+	float: left;
+}*/
 </style>
 
 <!-- Nav -->
@@ -73,70 +87,27 @@ body
 		 <!-- </div> -->
 		 	<input type="Number" name="Quantity" placeholder="Quantity" style="max-width:150px"><br><br>
 		 	
-		 	<input type="Number	" name="Price" placeholder="Price" style="max-width:150px">
+		 	<input type="Number	" name="Price" placeholder="Price" style="max-width:150px"><br><br>
+
+		 	<button onclick="addProduct()">Add Product</button>
 
 		<li style="border:0"> &nbsp;</li>
 
 	</ul>
 </div>
 
-			  <div class="row">
+	<div class="row" style="left: 0">
 	<div class="span12">
    
 	<div class="well well-small">
-		<h1>Check Out</h1>
-	<hr class="soften"/>	
+		<div id="cartList" style="bottom:0;position:absolute;left:0;width:29%;height:50%">
+		        <h1 style="text-align:center">CART</h1>
+		    </div>
 
-	<table class="table table-bordered table-condensed" width="50">
-              <thead>
-                <tr>
-                  <th>Product</th>
-                  <th>Description</th>
-				  <th>	Ref. </th>
-                  <th>Avail.</th>
-                  <th>Unit price</th>
-                  <th>Qty </th>
-                  <th>Total</th>
-				</tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><img width="100" src="assets/img/e.jpg" alt=""></td>
-                  <td>Items name here<br>Carate : 22<br>Model : n/a</td>
-                  <td> - </td>
-                  <td><span class="shopBtn"><span class="icon-ok"></span></span> </td>
-                  <td>$50.00</td>
-                  <td>
-					<input class="span1" style="max-width:34px" placeholder="1" id="appendedInputButtons" size="16" type="text" value="2">
-				  <div class="input-append">
-					<button class="	" type="button">-</button><button class="btn btn-mini" type="button"> + </button><button class="btn btn-mini btn-danger" type="button"><span class="icon-remove"></span></button>
-				</div>
-				</td>
-                  <td>$100.00</td>
-                </tr>
-				<tr>
-                  <td><img width="100" src="assets/img/f.jpg" alt=""></td>
-                  <td>Item names and brief details<br>Carate:24 <br>Model:HBK24</td>
-                  <td> - </td>
-                  <td><span class="shopBtn"><span class="icon-ok"></span></span> </td>
-                  <td>$348.42</td>
-                  <td>
-				  <input class="span1" style="max-width:34px" placeholder="1" size="16" type="text">
-				  <div class="input-append">
-					<button class="btn btn-mini" type="button">-</button><button class="btn btn-mini" type="button">+</button><button class="btn btn-mini btn-danger" type="button"><span class="icon-remove"></span></button>
-				</div>
-				  </td>
-                  <td>$348.42</td>
-                </tr>
-                
-				</tbody>
-            </table><br/>
-			</div>
 		</div>
 	</div>
-
-	
-	</div>
+</div>
+</div>
 	<div class="span9">
 <!-- 
 New Products
@@ -146,28 +117,28 @@ New Products
 		<div class="row-fluid">
 		  <ul class="thumbnails">
 			<li class="span4">
-			  <div class="thumbnail">
-					<img src="assets/img/a.jpg" alt="">
-				<div class="caption cntr">
+			  <!-- <div class="thumbnail">
+					<img src="assets/img/a.jpg" alt=""> -->
+				<!-- <div class="caption cntr">
 					<p>wrist watch</p>
 					<p><strong> $22.00</strong></p>
 					<h4><a class="shopBtn" href="#" title="add to cart"> Add to cart </a></h4>
 					 
 					<br class="clr">
-				</div>
-			  </div>
+				</div> -->
+			  <!-- </div>
 			</li>
 			<li class="span4">
 			  <div class="thumbnail">
 					<img src="assets/img/b.jpg" alt="">
-				<div class="caption cntr">
+			 -->	<!-- <div class="caption cntr">
 					<p>gold bengals</p>
 					<p><strong> $22.00</strong></p>
 					<h4><a class="shopBtn" href="#" title="add to cart"> Add to cart </a></h4>
 					<br class="clr">
-				</div>
-			  </div>
-  
+				</div> -->
+			<!--   </div>
+   -->
  <!-- Modal -->
 <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
@@ -191,22 +162,22 @@ New Products
     </div>
   </div>
 </div> 
-			</li>
+<!-- 			</li>
 			<li class="span4">
 			  <div class="thumbnail">
 								<img src="assets/img/c.jpg" alt="">
-				<div class="caption cntr">
+ -->				<!-- <div class="caption cntr">
 					<p>branded bands</p>
 					<p><strong> $22.00</strong></p>
 					<h4><a class="shopBtn" href="#" title="add to cart"> Add to cart </a></h4>
 					 
 					<br class="clr">
-				</div>
-			  </div>
+				</div> -->
+<!-- 			  </div>
 			</li>
 		  </ul>
 		</div>
-	
+ -->	
 <!-- 
 Clients 
 -->
