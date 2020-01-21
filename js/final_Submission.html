@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <body>  
+        <style>
+        
+        #pList{
+            border-style:dashed;
+        }
+        #cartList{
+            border-style: dashed;
+        }
+        #ap{
+            border-style: dashed;
+        }
+        #proname,#prodetails,#proquantity,#proprice{
+            float: right;
+        }
+        button{
+            background-color:rgb(100,55,100);
+        }
+        </style>
+        <div class="a" style="width:100%;height:100%"> <!-- whole div -->
+	        
+	        <div id="ap" style="left:0;width:29%;height:47%;position: absolute;">  <!-- add products -->
+		        <h1 style="text-align:center">ADD PRODUCTS</h1>
+                <input type="text" placeholder="Enter Productname"  id="name" ><br><br>
+                <input type="file" placeholder="Choose file"  id="image" accept=".png, .jpg, .jpeg" required ><br><br>
+                <input type="text" placeholder="Enter ProductDetail"  id="details" required ><br><br>
+                <input type="number" placeholder="Enter quantity"  id="quantity" required ><br><br>
+                <input type="number" placeholder="Enter Price"  id="price" required ><br><br>
+                <button onclick="addProduct()">Add Product</button>
+	        </div> 
+            <div id="pList" style="right:0;width:70%;height:100%;position:absolute">
+		        <h1 style="text-align:center">PRODUCT LIST</h1>
+    	    </div>
+	        <div id="cartList" style="bottom:0;position:absolute;left:0;width:29%;height:50%">
+		        <h1 style="text-align:center">CART</h1>
+		    <script>
+            function addProduct(){
+                let files = document.getElementById("image").files;
+                if (files && files.length) 
+                {
+                    var fr = new FileReader();
+                    fr.onload = function()
+                    {
+                        var img = document.createElement("img");
+                        img.src = fr.result;
+                        img.style="height: 150px;width : 150px";
+                        var container=document.createElement("div");container.style="display:flex;border-bottom:1px solid black";
+                        var div=document.createElement("div");div.appendChild(img);div.style="width:25%;height:15%";
+                        var div2=document.createElement("div");div2.style="width:50%;height:15%";
+                        var div3=document.createElement("div");div3.style="width:25%;height:15%;";
+                        var proname=document.createElement("h3");proname.setAttribute("id",proname);
+                        var prodetails = document.createElement("h3");prodetails.setAttribute("id",prodetails);
+                        var proquantity = document.createElement("h3");proquantity.setAttribute("id",proquantity); 
+                        var proprice = document.createElement("h3");proprice.setAttribute("id",proprice);
+                        var btn=document.createElement('button'); btn.setAttribute("id",btn);btn.setAttribute("onclick",addCart());
+                    
+                        proname.innerHTML="Product-Name : "+document.getElementById("name").value;
+                        div2.appendChild(proname);
+                    
+                        prodetails.innerHTML="Price-Description : "+document.getElementById("details").value;
+                        div2.appendChild(prodetails);
+                    
+                        proprice.innerHTML="Product-Price : "+document.getElementById("price").value;
+                        div2.appendChild(proprice);
+                    
+                        proquantity.innerHTML="Product-Quantity : "+document.getElementById("quantity").value;
+                        div2.appendChild(proquantity);
+                    
+                        btn.innerHTML="Add to Cart";
+                        btn.style="background-color:green;color:honeydew;height:40px";div3.appendChild(btn);
+                    
+                        container.appendChild(div);
+                        container.appendChild(div2);
+                        container.appendChild(div3);
+                        document.getElementById("pList").appendChild(container);
+                        document.getElementById("name").value = "";
+                        document.getElementById("image").value = "";
+                        document.getElementById("details").value = "";
+                        document.getElementById("quantity").value = "";
+                        document.getElementById("price").value = "";
+                    }
+                     fr.readAsDataURL(files[0]);
+                }
+            }
+            // function addCart()
+            // {
+            //     var cartRow = document.createElement('div')
+            //     cartRow.classList.add('cartList')
+            //     var cartItems = document.getElementsByClassName('quantity')[0]
+            //     var cartItemNames = cartItems.getElementsByClassName('name')
+            //     for (var i = 0; i < cartItemNames.length; i++) 
+            //     {
+            //         if (cartItemNames[i].innerText == title) 
+            //         {
+            //             alert('This item is already added to the cart')
+            //             return
+            //         }
+            //     }   
+            // }
+        
+            </script>
+		    </div>
+	        
+        </div>
+</body>
+</html>
