@@ -1,0 +1,20 @@
+//OUTPUT in JSON form
+SELECT JSON_ARRAYAGG(JSON_OBJECT('name', name, 'phone', phone)) from Person;
+
+//ANOTHER SYNTAX
+SELECT CONCAT(
+    '[', 
+    GROUP_CONCAT(JSON_OBJECT('name', name, 'phone', phone)),
+    ']'
+) 
+FROM person;
+
+////////////////////////////////ERROR HANDLING
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `error_handler`(OrderID INTEGER,CustomerName varchar(50))
+BEGIN	
+DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SELECT 'Error occured';
+INSERT INTO priyankkotakdb.Customers VALUES (4,'Salman');
+SELECT *FROM Customers;
+END$$
+DELIMITER ;
