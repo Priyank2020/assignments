@@ -1,0 +1,15 @@
+<apex:page standardController="Survey_question__c" showHeader="false" sidebar="false">
+    <apex:form >
+        Do you want to say anything about our service?<apex:inputField value="{! Survey_question__c.Question__c}"/><br/><br/>
+        <apex:inputField value="{! Survey_question__c.required_checkbox__c}"/><br/><br/>
+        <apex:inputField value="{! Survey_question__c.Name}"/><br/><br/>
+       
+       	<apex:selectRadio >
+        	<apex:selectOption itemValue="1" itemLabel="1" id="redOption"/>
+        	<apex:selectOption itemValue="2" itemLabel="2" id="blueOption"/>
+    	</apex:selectRadio> 
+    
+    	<apex:commandButton id="saveBtn" value="Save" action="{!save}" />
+	    <apex:commandButton id="cancelBtn" value="Cancel" action="{!cancel}" /><br/><br/>
+    </apex:form>
+</apex:page>

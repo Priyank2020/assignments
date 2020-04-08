@@ -1,0 +1,5 @@
+<apex:page standardController="Survey_response__c">
+    
+     <apex:outputField value="{!Survey_response__c.s__c}"/>
+     <apex:outputField value="{!Survey_response__c.Name}"/>
+</apex:page>

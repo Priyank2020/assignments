@@ -1,0 +1,52 @@
+<apex:page controller="sampleCon">
+/*    <apex:form id="myForm">
+        <apex:pageMessages />
+        <apex:pageBlock >
+        <apex:pageBlockSection >
+            
+            <apex:selectRadio value="{!selectedValue}" label="How would you rate your overall satisfaction with your recent experience with Kia Roadside Assistance"><br/>
+                <apex:selectOptions value="{!items}" />
+                </apex:selectRadio><p/>
+            
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <apex:selectRadio value="{!selectedValue1}" label="Field 1">
+                <apex:selectOptions value="{!items}" />
+                </apex:selectRadio><p/>
+            
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <apex:selectRadio value="{!selectedValue2}" label="Field 2">
+                <apex:selectOptions value="{!items}" />
+                </apex:selectRadio><p/>
+            
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <apex:selectRadio value="{!selectedValue3}" label="Field 3">
+                <apex:selectOptions value="{!items}" />
+                </apex:selectRadio><p/>
+            
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <apex:selectRadio value="{!selectedValue4}" label="Field 4">
+                <apex:selectOptions value="{!items}" />
+                </apex:selectRadio><p/>
+            
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <apex:selectRadio value="{!selectedValue5}" label="Field 5">
+                <apex:selectOptions value="{!items}" />
+                </apex:selectRadio><p/>
+            
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <apex:selectRadio value="{!selectedValue6}" label="Field 6">
+                <apex:selectOptions value="{!items}" />
+                </apex:selectRadio><p/>
+            
+        </apex:pageBlockSection>
+
+        <apex:commandButton value="Submit" action="{!test}" rerender="myForm"/>
+        </apex:pageBlock>
+     </apex:form> */
+</apex:page>

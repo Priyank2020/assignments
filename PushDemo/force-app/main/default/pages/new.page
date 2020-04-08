@@ -1,0 +1,3 @@
+<apex:page standardController="Case" action="{!URLFOR('https://ap16.salesforce.com/survey/runtimeApp.app?invitationId=0Ki2w000000TlsU&surveyName=salesforce_task_survey&UUID=4de6450e-45e0-4ca8-b8fe-17bc45af07a1?id=5002w000004cSdeAAE')}" >
+	<site:previewAsAdmin />
+</apex:page>
