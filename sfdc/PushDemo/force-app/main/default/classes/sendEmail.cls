@@ -11,7 +11,7 @@ global class sendEmail implements Database.Batchable <sObject> {
                 String[] toAddresses = new String[] {c.SuppliedEmail};
                 mail.setToAddresses(toAddresses);
                 mail.setSubject('Your feedback is important. Help us to improve by taking this survey.');
-                mail.setHtmlBody('<a href = "https://publicc-developer-edition.ap16.force.com/newLancer?CaseId='+c.Id+'">click here</a>');
+                mail.setHtmlBody('<a href = "https://publicc-developer-edition.ap16.force.com/newLancer/s/?CaseId='+c.Id+'">click here</a>');
                 Messaging.sendEmail(new Messaging.SingleEmailMessage[]{mail});
             }
         }

@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="DATA_SURVEY" icon-name="custom:custom14">
+        </lightning-card>
+
+        <template for:each={question.data} for:item="que">
+            {que.Name}<br key={que.Id}/>
+            <input type="radio" name="rating" value="1" key={que.Id}>1
+            <input type="radio" name="rating" value="2" key={que.Id}>2
+            <input type="radio" name="rating" value="3" key={que.Id}>3
+            <input type="radio" name="rating" value="4" key={que.Id}>4
+            <input type="radio" name="rating" value="5" key={que.Id}>5
+            <input type="radio" name="rating" value="6" key={que.Id}>6<br key={que.Id}/><br key={que.Id}/>
+       </template>
+       <lightning-layout-item size="12">
+        <lightning-button
+        variant="brand"
+        label="OK"
+        class="button"
+        type="Submit"
+        >
+        </lightning-button>
+        </lightning-layout-item>
+</template>

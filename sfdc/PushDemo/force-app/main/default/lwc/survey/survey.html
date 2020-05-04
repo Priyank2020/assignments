@@ -1,0 +1,15 @@
+<template> 
+  <template for:each={question.data} for:item="que">
+    <lightning-input type="text" key={que.Id} value={que.Question__c} onmouseover={handleInput}></lightning-input><br key={que.Id}/>
+    <lightning-radio-group key={que.Id}  options={options} value={value} onchange={handleChange} required>
+    </lightning-radio-group>
+  </template>
+    <lightning-button if:false={flag} variant="brand" label="Save" title="Save" icon-name="utility:save" onclick={showMSG} class="slds-m-left_medium">
+    </lightning-button>  
+  <template if:true={flag}>
+    <lightning-card title={label.greeting}>
+    <lightning-button  variant="brand" label="close" title="close"  onclick={closeMSG} class="slds-m-left_medium">
+    </lightning-button>
+    </lightning-card>
+  </template>
+</template>

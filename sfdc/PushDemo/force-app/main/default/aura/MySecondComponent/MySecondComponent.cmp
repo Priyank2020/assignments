@@ -1,0 +1,18 @@
+<aura:component >
+    <div class="slds-box">
+        <div class="slds-align_absolute-center" style="height:5rem">
+            <h1>'Distance Calculator'</h1>
+        </div>   
+    </div>
+    <aura:attribute name="account" type="account"/>
+    <aura:attribute name="selectedRecord" type="Account" default="{}" description="Use,for store SELECTED sObject Record"/>
+    <aura:attribute name="listOfSearchRecords" type="Account[]" description="Use,for store the list of search records which returns from apex class"/>
+    <aura:attribute name="SearchKeyWord" type="string"/>
+   <aura:attribute name="Message" type="String" default="Search Result.."/>
+    <br/>
+    <div class="slds-border_bottom">
+        <lightning:button variant="brand" value="Component Methods" label="Get Distance" onclick="{!c.findDistance}"/>
+    </div>
+    
+    
+</aura:component>

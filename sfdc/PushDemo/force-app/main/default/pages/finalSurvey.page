@@ -1,12 +1,11 @@
 <apex:page controller="SurveyController" >
-    <apex:form >
-        <apex:pageBlock title="Survey-2020">
-            <apex:repeat value="{!survey}" var="qt" >
-                <h1>{! qt.Question}</h1><br/>
-                <apex:inputText value="{! qt.Response}"/><br/><br/>
-            </apex:repeat>
-            
-            <apex:commandButton value="Submit" action="{!saveResponse}"/>
-        </apex:pageBlock>
+  	 <apex:form >
+         <apex:pageBlock title="Survey-2020">
+         <apex:repeat value="{!survey}" var="qt" >
+             <h1>{! qt.Question}</h1><br/>
+             <apex:inputText value="{! qt.Response}"/><br/><br/>	
+		 </apex:repeat>
+         <apex:commandButton value="Submit" action="{!saveResponse}" disabled="{!If(ISNULL(survey),true,false)}"/>
+         </apex:pageBlock>
     </apex:form>
 </apex:page>
