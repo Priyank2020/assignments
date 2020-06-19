@@ -8,4 +8,10 @@
         <target>lightning__HomePage</target>
         <target>lightningCommunity__Page</target>
     </targets>
-</LightningComponentBundle>
+    <!-- <messaging:emailTemplate subject="{!$Label.Email_Subject}" recipientType="Contact" language="{!recipient.Preferred_Language_Code__c}">
+    <messaging:htmlEmailBody> --><!-- <language="{!recipient.Preferred_Language_Code__c}">
+        <c:MyLabel language="en_US">
+        <c:MyLabel language="{!recipient.Preferred_Language_Code__c}">
+        <c:MyLabel language="nl_NL">
+        </language> --><!-- </messaging:htmlEmailBody>
+</messaging:emailTemplate> --></LightningComponentBundle>

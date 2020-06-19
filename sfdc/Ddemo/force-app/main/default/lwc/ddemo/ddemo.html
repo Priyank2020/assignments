@@ -1,0 +1,17 @@
+<template>
+    <div class="row">
+        <h2 class="header">Basic Examples</h2>
+        <lightning-textarea name="input1" label="Enter some text" ></lightning-textarea>
+    </div>
+    <div>
+        <lightning-button label="Convertor" onclick={pdfconvetor}></lightning-button>
+    </div>
+    <template if:true={https://priyankkotak-dev-ed.lightning.force.com/lightning/page/home}>
+        <iframe src={https://priyankkotak-dev-ed.lightning.force.com/lightning/page/home} style={pdfHeight}></iframe>
+    </template>
+    <template if:false={https://priyankkotak-dev-ed.lightning.force.com/lightning/page/home}>
+        <lightning-card
+            >No PDF File ID found. Please specify PDF File ID.</lightning-card
+        >
+    </template>
+</template>

@@ -1,6 +1,5 @@
 ({
-    
-    
+
    onfocus : function(component,event,helper){
        $A.util.addClass(component.find("mySpinner"), "slds-show");
         var forOpen = component.find("searchRes");

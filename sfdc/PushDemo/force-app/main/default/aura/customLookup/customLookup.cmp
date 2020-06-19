@@ -11,9 +11,7 @@
     <!--declare events hendlers-->  
     <aura:handler name="oSelectedRecordEvent" event="c:selectedsObjectRecordEvent" action="{!c.handleComponentEvent}"/>
    
-    
-    <!-- https://www.lightningdesignsystem.com/components/lookups/ --> 
-    
+    <!-- https://www.lightningdesignsystem.com/components/lookups/ -->
     <div onmouseleave="{!c.onblur}" aura:id="searchRes" class="slds-form-element slds-lookup slds-is-close" data-select="single">
         <label class="slds-form-element__label" for="lookup-348">{!v.label}</label>
         <!--This part is for display search bar for lookup-->  
