@@ -1,0 +1,41 @@
+<apex:page controller="DescibeDemoController" >
+    <apex:form id="Describe">
+        
+        <apex:pageBlock id="block2" >
+            <apex:pageblockbuttons location="Bottom" >
+                <apex:commandButton value="Show Fields" action="{!showFields}" />
+            </apex:pageblockbuttons>
+            
+            <apex:outputPanel id="panelId">
+                
+                <apex:pageblocksection >
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Object Name</apex:outputLabel>
+                        <apex:selectList value="{!selectedObject}" size="1">
+                            <apex:selectOptions value="{!ListObejectName}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                </apex:pageblocksection>
+                
+                <!-- <apex:pageBlockSection id="result" title="Field Detail for {!selectedObject}" rendered="{!if(listField.size > 0 ,true,false)}"   >-->
+                <apex:pageblockTable value="{!listField}" var="field" rendered="{!normalList}"> 
+                    <apex:column headerValue="selected">
+                        <apex:inputCheckbox value="{!field.selected}"/>
+                    </apex:column>
+                    <apex:column value="{!field.fieldName }" headerValue="Name" />
+                    <apex:column value="{!field.fieldAPIName}"  headerValue="API Name"/>
+                </apex:pageblockTable>
+                
+                <apex:pageblockTable value="{!selectedlistField}" var="field" rendered="{!selectedList}">
+                    <apex:column value="{!field.fieldName}" headerValue="Name" />
+                    <apex:column value="{!field.fieldAPIName}" headerValue="API Name"/>
+                    <!--<apex:column headerValue="select">
+                        <apex:inputCheckbox value="{!field.selected}"/>
+                    </apex:column>-->
+                </apex:pageblockTable>
+                <!-- </apex:pageBlockSection>-->
+            </apex:outputPanel>
+        </apex:pageBlock>
+        <apex:commandButton value="Proceed with Selected" action="{!ProceedWithSelected}" reRender="panelId"/>
+    </apex:form>
+</apex:page>
